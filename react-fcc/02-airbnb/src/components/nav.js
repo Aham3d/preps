@@ -1,10 +1,10 @@
 
-function Nav() {
+function Navbar() {
   return (
-    <div>
-      <img src="../images/airbnb.svg"/>
-    </div>
+    <>
+      <Image />
+    </>
   )
 }
 
-export default Nav;
+export default Navbar;
