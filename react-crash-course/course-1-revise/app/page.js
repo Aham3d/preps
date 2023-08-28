@@ -1,7 +1,6 @@
 "use client"
 import Header from "@/components/Header"
 import {useState} from 'react'
-import About from "./About/page"
 
 const page = () => {
   const [user, setuser] = useState("Ahmed")
@@ -19,7 +18,6 @@ const page = () => {
         {message}
       </button>
 
-      
     </div>
   )
 }
