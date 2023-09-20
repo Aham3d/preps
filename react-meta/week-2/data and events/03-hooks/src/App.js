@@ -1,5 +1,6 @@
 import './App.css';
 import {useState} from "react"
+import RegisterForm from './using hooks(reading)/RegisterForm';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <button onClick={() => setText('hi')}>
         Reset
       </button>
+      <RegisterForm />
     </>
   )
 }
