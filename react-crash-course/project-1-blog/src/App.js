@@ -4,6 +4,10 @@ import TodoCount from "./components/TodoCount";
 import TodoList from "./components/TodoList";
 import AddTodo from "./components/AddTodo";
 
+/* 
+  blog link - https://www.freecodecamp.org/news/what-is-lifting-state-up-in-react/
+*/
+
 function App() {
 
   const [todos, setTodos] = useState(['item a', 'item 2', 'item 3']);
