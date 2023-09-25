@@ -9,13 +9,11 @@ function App() {
     <>
       <nav className='nav'>
         <Link to="/" className='nav-item'>HomePage</Link> 
-        <Link to="/about-me" className='nav-item'>about me</Link> 
+        <Link to="/about" className='nav-item'>about me</Link> 
       </nav>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/" element={<HomePage />} />
-
-        <Route path="/about-me" element={<AboutMe />} />
+        <Route path="/about" element={<AboutMe />} />
       </Routes>
     </>
   )
