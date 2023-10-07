@@ -1,10 +1,8 @@
-import Header from '@/Components/Header';
 import React from 'react'
 
-const About = (props) => {
+const About = () => {
   return (
     <div>
-      <Header />
       About
     </div>
   )

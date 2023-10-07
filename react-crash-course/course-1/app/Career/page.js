@@ -1,13 +1,11 @@
-import Header from '@/Components/Header'
 import React from 'react'
 
-const Blog = () => {
+const Career = () => {
   return (
     <div>
-      <Header />
-      Blog
+      career
     </div>
   )
 }
 
-export default Blog
+export default Career

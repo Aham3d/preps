@@ -1,8 +1,5 @@
 "use client"
-import Header from '@/Components/Header';
-import { Marmelad } from 'next/font/google';
 import React, {useState} from 'react'
-import Link from 'next/link'
 
 const page = () => {
   const [marks, setMarks] = useState(80)
@@ -16,7 +13,6 @@ const page = () => {
     <div>
 
       <>
-        <Header user={user} contact={contact}/>
 
         <h1  className='font-bold text-xl'>my total marks are = {marks}</h1>
         <button onClick={() => {
