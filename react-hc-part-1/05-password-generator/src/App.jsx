@@ -3,8 +3,8 @@ import { useState, useCallback, useEffect, useRef } from 'react'
 function App() {
 
   const [length, setLength] = useState(8);
-  const [numberAllowed, setNumber ] = useState('false'); 
-  const [CharAllowed, setCharAllowed] = useState('false');
+  const [numberAllowed, setNumber ] = useState(false); 
+  const [CharAllowed, setCharAllowed] = useState(false);
   const [passowrd, setPassword] = useState('')
 
   const passwordGenerator = useCallback(() => {
@@ -33,7 +33,7 @@ function App() {
   const copyPassword = useCallback(() => {
     passwordRef.current?.select();
     // passwordRef.current?.setSelectionRange(0, 3); // for more optimization
-    window.navigator.clipboard.writeText(passowrd)
+    window.navigator.clipboard.writeText(passowrd) // this copies the password but you cannot see the selection
   }, [passowrd])
 
   return (
@@ -45,7 +45,6 @@ function App() {
         <h1 className='text-white text-center'>Password generator</h1>
 
         <div className='flex shadow rounded-xl overflow-hidden mb-4'>
-
           <input 
             type="text" 
             value={passowrd} 
@@ -59,12 +58,12 @@ function App() {
           className='ouline-none bg-blue-600 text-white px-3 py-1 shrink-0'>
             COPY
           </button>
-
         </div>
 
         <div className='flex text-sm gap-x-2'>
           <div className='flex items-center gap-x-1'>
-            <input type="range" 
+            <input 
+              type="range" 
               min={8}
               max={50}
               value={length}
@@ -88,7 +87,7 @@ function App() {
             <input 
               type="checkbox" 
               defaultChecked={CharAllowed}
-              id='characterInput'
+               id='characterInput'
               onChange={() => {
                 setCharAllowed((prev) => !prev);
               }}
