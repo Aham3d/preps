@@ -12,3 +12,4 @@ function Card(props) {
 };
 
 export default Card;
+// revise(oct)
