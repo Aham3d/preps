@@ -1,7 +1,6 @@
 // common event handling & syntax for handlers
 import ModeToggler from './ModeToggler';
 import './App.css';
-import Btn from './Btn';
 
 function App() {
   return (
@@ -10,4 +9,4 @@ function App() {
 }
 
 export default App;
-// revision
+// revision(oct)
