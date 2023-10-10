@@ -3,9 +3,10 @@ import Child from './Child';
 function App() {
   return (
     <>
-      <Child name="Ahamed" job="software" learning="something"/>
+      <Child name="Ahamed" job="SE" learning="something"/>
     </>
   );
 }
 
 export default App;
+// revise(oct)
