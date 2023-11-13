@@ -41,20 +41,15 @@ const App = () => {
         Todo List
       </h1>
       <ul className='list'>
-        {todos.map(todo => {
-          return ( 
-            <li key={todo.id}>
-              <label>
-                <input type="checkbox" checked={todo.completed}/>
-                {todo.title}
-              </label>
-              <button className='btn delete'>
-                delete
-              </button>
-            </li>
-          )
-        })}
-        
+        <li>
+          <label>
+            <input type="checkbox"/>
+            todo
+          </label>
+          <button className='btn delete'>
+            delete
+          </button>
+        </li>  
       </ul>
     </>
   )
