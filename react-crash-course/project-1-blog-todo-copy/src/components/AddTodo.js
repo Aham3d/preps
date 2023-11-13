@@ -1,6 +1,7 @@
 import React from 'react'
 
 function AddTodo(props) {
+
   function handleSubmit(e) {
     e.preventDefault(); 
     const todo = e.target.elements.todo.value; 
@@ -17,6 +18,7 @@ function AddTodo(props) {
       </form>
     </div>
   )
+  
 }
 
 export default AddTodo
