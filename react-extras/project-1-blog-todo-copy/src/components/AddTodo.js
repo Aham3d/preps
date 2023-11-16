@@ -12,7 +12,7 @@ function AddTodo(props) {
     <div>
       <form onSubmit={handleSubmit}>
         <input type='text' id='todo'/>
-        <button type='submit'>
+        <button>
           Add
         </button>
       </form>
