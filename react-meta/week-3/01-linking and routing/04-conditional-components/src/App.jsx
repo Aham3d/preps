@@ -30,9 +30,10 @@ function App() {
 
   return (
     <>
-      <LogInOut isLoggedIn={false}/>
+      <LogInOut isLoggedIn={true}/>
     </>
   )
 }
 
 export default App
+// revise(nov)

@@ -19,15 +19,16 @@ function App() {
   } else if(day.toLowerCase() === 'friday') {
     dayMessage = `${day}, excitement >>`;
   } else {
-    dayMessage = `${day} it is!! have fun`; 
+    dayMessage = `${day} it is!! have fun.`; 
   }
 
   return (
     <>
       <h1>{dayMessage}</h1>
-      <h2>{morning ? "had your breakfast" : ' '}</h2>
+      <h2>{morning ? "had your breakfast" : 'what did you had for breakfast'}</h2>
     </>
   )
 }
 
 export default App
+// revision(nov)
