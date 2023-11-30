@@ -9,7 +9,7 @@ const ACTIONS = {
   EVALUATE: 'evaluate'
 }
 
-function reducer() {
+function reducer(state, {type, payload}) {
 
 }
 
