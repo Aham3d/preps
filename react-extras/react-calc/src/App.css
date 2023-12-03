@@ -30,7 +30,7 @@ body {
   align-items: flex-end;
   padding: 1rem;
   word-wrap: break-word;
-  word-break: break-all;
+  word-break: break-all;  
 }
 
 .output .previous {
@@ -40,6 +40,8 @@ body {
 .output .current {
   color: rgba(0,0, 0);
   font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
 }
 
 .calculator-grid > button {
