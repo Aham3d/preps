@@ -31,8 +31,48 @@ function reducer(state, {type, payload}) {
     }
 
     case ACTIONS.CHOOSE_OPERATION:
-      
+      if(state.currentOperand == null && state.previousOperand == null) {
+        return state
+      } 
+
+      if(state.previousOperand == null) {
+        return {
+          ...state, 
+          operation: payload.operation, 
+          previousOperand: state.currentOperand, 
+          currentOperand: null,
+        }
+      }
+
+      return {
+        ...state, 
+        previousOperand: evaluate(state), 
+        operation: payload.operation, 
+        currentOperand: null
+      }
   }
+}
+
+function evaluate( {currentOperand, previousOperand, operation}) {
+  const prev = parseFloat(previousOperand)
+  const current = parseFloat(currentOperand)
+  if(isNaN(prev) || isNaN(current) ) return ""
+  let computation = "" 
+  switch(operation) {
+    case"+":
+      computation = prev + current
+      break
+    case"-":
+      computation = prev - current
+    break
+    case"/":
+      computation = prev / current
+    break
+    case"*":
+      computation = prev * current
+    break
+  }
+  return computation.toString
 }
 
 function App() {
@@ -69,9 +109,9 @@ function App() {
       <DigitButton digit="7" dispatch={dispatch} />
       <DigitButton digit="8" dispatch={dispatch} />
       <DigitButton digit="9" dispatch={dispatch} />
-      <DigitButton digit="0" dispatch={dispatch} />
-      <DigitButton digit="." dispatch={dispatch} />
       <OperationButton operation="-" dispatch={dispatch} />
+      <DigitButton digit="." dispatch={dispatch} />
+      <DigitButton digit="0" dispatch={dispatch} />
       <button className="span-two">=</button>
     </div>
   )
